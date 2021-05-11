@@ -12,7 +12,7 @@ const refresh = () => {
 
 const CardExampleCard = ({weatherData}) => (
     <>
-    <button className="button" role="Reload city status" onClick={refresh}>{element}</button>
+    <button className="button"  onClick={refresh}>{element}</button>
     <section className="sec-one">
         <h4>{moment().format('dddd')}</h4>
         <h1 className="header temp-two">{weatherData.name}</h1>
