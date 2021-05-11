@@ -1,38 +1,129 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+    115deg,
+    rgba(67, 67, 189, 0.527),
+    rgba(38, 125, 175, 0.123)
+  ),
+  url(./components/images/bg-medium.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Nunito', sans-serif;
+  color: rgb(224, 224, 224);
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sec-one{
+
+  height: 15vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  padding: 3%;
+}
+
+.sec-one > h4, h5{
+  font-size: 1.3em;
+}
+
+.sec-two{
+  display: flex;
+  justify-content: space-between;
+  padding: 5%;
+  font-size: 1em;
+}
+
+.header-one{
+width: 100vw;
+  height: 60vh;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-flow: column wrap;
+
 }
 
-.App-link {
-  color: #61dafb;
+.header-one > h6{
+  font-size: 1em;
+  padding: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.button{
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 2.3em;
+  cursor: pointer;
+  padding: 0;
+  color: rgb(114, 105, 245);
+  position: absolute;
+  bottom: 15px;
+  right: 10%;
+  animation: myAnim 1s ease 0s infinite normal forwards;
+
+}
+
+@keyframes myAnim {
+  0% {
+    transform: rotate(0);
   }
-  to {
+
+  100% {
     transform: rotate(360deg);
   }
 }
+
+.temp-two{
+  display: none;
+}
+
+main{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+
+
+  .sec-one{
+    width: 100vw;
+    height: 15vh;
+    justify-content: space-around;
+  }
+
+  .sec-one > h1 {
+    font-size: 1.9em;
+  }
+  .header-one{
+    height: 49vh;
+    flex-flow: row wrap;
+  }
+
+  .temp-one{
+    display: none;
+  }
+  .temp-two{
+    display: block;
+  }
+
+  .sec-two > h6, h3{
+    font-size: 1.6rem;
+  }
+
+  .button{
+  display: none;
+  }
+ }
